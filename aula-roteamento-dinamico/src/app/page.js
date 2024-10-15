@@ -5,10 +5,9 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <h1>Home</h1>
-      <ul>
-        <a href="/products">Produtos</a>
-        
-      </ul>
+      <p>Product 1</p>
+      <p>Product 2</p>
+      <p>Product 3</p>
     </div>
   );
 }
