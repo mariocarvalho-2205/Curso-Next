@@ -6,6 +6,7 @@ export default function Home() {
 		<>
 			<div className={styles.page}>
 				<h1>CSS</h1>
+				<Image src="/images/city.jpg" width="300" height="600" alt="Cidade a noite"/>
 			</div>
 		</>
 	);
