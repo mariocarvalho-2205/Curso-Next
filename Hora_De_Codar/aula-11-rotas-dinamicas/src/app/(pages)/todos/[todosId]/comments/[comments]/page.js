@@ -10,7 +10,7 @@ export default function commentsId() {
 
     return (
         <>
-            <h1>Comments: {params.todosId} - {params.comments}</h1>
+            <h1>Comments: {params.todosId} - {params.commentsId}</h1>
             <Link href={`/todos/${params.todosId}`}>Voltar</Link>
 
         </>
