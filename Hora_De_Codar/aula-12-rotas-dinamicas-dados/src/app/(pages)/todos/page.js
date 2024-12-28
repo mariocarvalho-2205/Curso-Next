@@ -10,7 +10,7 @@ export const metadata = {
 	description: "A melhor loja online de produtos artesanais do Brasil",
 };
 
-export default async function todos() {
+export default async function todos({props}) {
 	const data = await fetch("https://jsonplaceholder.typicode.com/todos");
 
 	const todos = await data.json();

@@ -1,16 +1,28 @@
-'use client'
 import Link from "next/link"
-import { useParams } from "next/navigation"
+
+async function getComments(id) {
+    const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`, {
+        cache: 'force-cache'
+    })
+
+    if (!response.ok) {
+        throw new Error('Falha no fetch Comments!')
+    }
+
+    return response.json()
+}
 
 
-export default function comments () {
-        const params = useParams()
+export default async function comments ({params}) {
+    
+    const todo = await getComments(params.todosId)
     
     
     return (
         <>
-            <h1>Todo - comments {params.todosId}</h1>
-            <Link href={'/todos'}>Voltar</Link>
+            <h1>Todo - comments: {todo.title}</h1>
+            
+            <Link href={`/todos/${todo.id}`}>Voltar</Link>
         </>
     )
 
